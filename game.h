@@ -14,10 +14,11 @@
 # define GAME_H
 
 # include <ncurses.h>
+# include <curses.h>
 # include <string.h>
 # include <stdlib.h>
 # include <time.h>
-# include "./libft/libft.h"
+# include "libft/libft.h"
 
 enum			e_const
 {
