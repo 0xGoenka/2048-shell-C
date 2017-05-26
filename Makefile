@@ -22,9 +22,9 @@ LIB_PATH = -L.
 
 LIB_NAME = -lncurses
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -g
 
-CC = clang
+CC = gcc
 
 SRC_NAME = main.c       	    	    \
            message.c                    \

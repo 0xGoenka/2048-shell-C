@@ -47,9 +47,7 @@ void	setnu(int i, int tab[i][i])
 {
 	int x;
 	int y;
-	int	w;
 
-	w = set() * 2;
 	x = 0;
 	y = 0;
 	while (x < i)
@@ -68,14 +66,10 @@ void	setnu(int i, int tab[i][i])
 
 void	msquare(int j, int i)
 {
-	int x;
-	int y;
 	int w;
 	int p;
 
 	w = j * 2;
-	x = 0;
-	y = 0;
 	p = 1;
 	curs_set(FALSE);
 	line(0, j, 0);
