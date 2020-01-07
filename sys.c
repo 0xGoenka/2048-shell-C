@@ -14,7 +14,7 @@
 
 void	print3(int ox, int oy)
 {
-	mvprintw(ox++, oy++, " ___  ");
+	mvprintw(ox++, oy, " ___  ");
 	mvprintw(ox++, oy, "|__   ");
 	mvprintw(ox++, oy, "   ) |");
 	mvprintw(ox++, oy, "  / / ");
@@ -44,6 +44,8 @@ void	print8(int ox, int oy)
 
 void	pr(int ox, int oy, int n)
 {
+	if (n == 2)
+		print3(ox,oy);
 	if (n == 4)
 		print4(ox, oy);
 	if (n == 8)

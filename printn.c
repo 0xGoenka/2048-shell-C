@@ -12,6 +12,16 @@
 
 #include "game.h"
 
+void	print2(int ox, int oy)
+{
+	mvprintw(ox++, oy++, "   __   __  ");
+	mvprintw(ox++, oy, " /_ | / /  ");
+	mvprintw(ox++, oy, "  | |/ /_  ");
+	mvprintw(ox++, oy, "  | | '_ \\ ");
+	mvprintw(ox++, oy, "  | | (_) |");
+	mvprintw(ox++, oy, "  |_|\\___/ ");
+}
+
 void	print16(int ox, int oy)
 {
 	mvprintw(ox++, oy++, "   __   __  ");

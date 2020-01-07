@@ -18,9 +18,7 @@ OBJ_PATH =
 
 INC_PATH = -I.
 
-LIB_PATH = -L.
-
-LIB_NAME = -lncurses
+LIB_NAME = -lncurses -lcurses
 
 CFLAGS = -g
 
@@ -52,15 +50,17 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	make -C ./libft
-	$(CC) $(LIB_PATH) $(LIB_NAME) ./libft/libft.a  $^ -o $@
+	$(CC)  $^ -o $@ $(LIB_NAME) ./libft/libft.a
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
-	$(CC) $(CFLAGS) $(INC_PATH) -c $<
+	$(CC) $(CFLAGS) $(INC_PATH) -c $(LIB_NAME) $<
 
 clean:
 	rm -f $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)
+	cd libft/
+	rm -f *.o
 
 re: fclean all
